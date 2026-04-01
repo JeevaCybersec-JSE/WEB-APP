@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DinoVerse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🎬 BACKGROUND VIDEO -->
+<video autoplay muted loop id="bg-video">
+    <source src="dino.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<!-- 🔐 LOGIN PAGE -->
+<div id="loginPage" class="container">
+    <h1 class="title">DINO ACCESS</h1>
+
+    <div class="login-box">
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">ENTER</button>
+        <p id="error"></p>
+    </div>
+</div>
+
+<!-- 🥚 APP PAGE -->
+<div id="appPage" class="container hidden">
+    <h1 class="title">🥚 Choose Your Egg</h1>
+
+    <div id="eggs">
+        <div class="egg" onclick="hatch('TRex')">🥚</div>
+        <div class="egg" onclick="hatch('Raptor')">🥚</div>
+    </div>
+
+    <div id="dinoArea" class="hidden">
+        <h2 id="dinoName"></h2>
+        <div id="dino">🦖</div>
+
+        <button onclick="feed()">Feed</button>
+        <button onclick="play()">Play</button>
+        <button onclick="resetApp()">Hatch Again</button>
+
+        <p id="actionText"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
