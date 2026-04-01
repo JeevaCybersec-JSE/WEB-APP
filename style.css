@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    overflow: hidden;
+    color: white;
+}
+
+/* 🎬 VIDEO BACKGROUND */
+#bg-video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* 🌑 OVERLAY */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4));
+    z-index: -1;
+}
+
+/* CENTER */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TITLE */
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px red;
+    letter-spacing: 4px;
+}
+
+/* LOGIN BOX */
+.login-box {
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255,0,0,0.3);
+}
+
+/* INPUT */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+/* BUTTON */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid red;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: red;
+    box-shadow: 0 0 20px red;
+    transform: scale(1.05);
+}
+
+/* ERROR */
+#error {
+    color: #ff4d4d;
+}
+
+/* HIDDEN */
+.hidden {
+    display: none;
+}
+
+/* 🥚 EGGS */
+#eggs {
+    display: flex;
+    gap: 40px;
+}
+
+.egg {
+    font-size: 60px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.egg:hover {
+    transform: scale(1.3);
+    text-shadow: 0 0 20px yellow;
+}
+
+/* 🦖 DINO */
+#dinoArea {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#dino {
+    font-size: 80px;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ACTION BUTTONS */
+#dinoArea button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid red;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+#dinoArea button:hover {
+    background: red;
+    box-shadow: 0 0 15px red;
+}
